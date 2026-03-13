@@ -1,0 +1,12 @@
+version: 1
+component:
+  id: npm-test
+  kind: check_bundle
+  name: NPM Test
+  description: Runs the repository's default npm test command.
+
+checks:
+  - name: npm_test
+    command: npm test
+    timeout_seconds: 900
+    on_fail: retry

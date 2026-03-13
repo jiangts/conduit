@@ -1,0 +1,10 @@
+version: 1
+component:
+  id: jingle-failure
+  kind: hook
+  lifecycle: on_failure
+  name: Jingle Failure
+  description: Plays a bundled failure sound after a failed run.
+
+hook:
+  command: ./scripts/complete.sh failure

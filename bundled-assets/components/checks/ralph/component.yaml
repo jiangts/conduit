@@ -1,0 +1,12 @@
+version: 1
+component:
+  id: ralph
+  kind: check_bundle
+  name: Ralph
+  description: Succeeds only when the attempt output contains the string DONE.
+
+checks:
+  - name: ralph
+    command: ./scripts/check.sh
+    timeout_seconds: 30
+    on_fail: retry

@@ -1,0 +1,10 @@
+version: 1
+component:
+  id: worktree-from-main
+  kind: hook
+  lifecycle: before_attempt
+  name: Worktree From Main
+  description: Creates an attempt worktree from the baseline ref and updates workspace_path for the attempt.
+
+hook:
+  command: ./scripts/setup.sh

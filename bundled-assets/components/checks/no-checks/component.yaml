@@ -1,0 +1,8 @@
+version: 1
+component:
+  id: no-checks
+  kind: check_bundle
+  name: No Checks
+  description: Explicitly disables post-attempt checks.
+
+checks: []

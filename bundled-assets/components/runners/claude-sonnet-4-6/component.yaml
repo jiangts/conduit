@@ -1,0 +1,10 @@
+version: 1
+component:
+  id: claude-sonnet-4-6
+  kind: runner
+  name: Claude Sonnet 4.6
+  description: Uses Anthropic's Claude Sonnet 4.6 model.
+
+runner:
+  provider: claude
+  model: claude-sonnet-4-6

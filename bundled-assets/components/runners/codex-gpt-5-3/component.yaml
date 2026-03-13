@@ -1,0 +1,10 @@
+version: 1
+component:
+  id: codex-gpt-5-3
+  kind: runner
+  name: Codex GPT-5.3
+  description: Uses OpenAI's GPT-5.3-Codex model.
+
+runner:
+  provider: codex
+  model: gpt-5.3-codex

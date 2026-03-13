@@ -1,0 +1,10 @@
+version: 1
+component:
+  id: jingle-success
+  kind: hook
+  lifecycle: on_success
+  name: Jingle Success
+  description: Plays a bundled success sound after a successful run.
+
+hook:
+  command: ./scripts/complete.sh

@@ -1,0 +1,30 @@
+version: 1
+preset:
+  id: basic
+  name: Basic
+  description: Minimal starter policy assembly with a git worktree hook and a small component set.
+  intent: Select bundled components and bootstrap metadata for repo initialization.
+
+# Presets are assembly metadata, not runnable policy files.
+# `defaults` are the initial component selections `conduit init` should prefill.
+# `available` defines which bundled components the interactive init flow may offer.
+defaults:
+  runner_component: codex-gpt-5-3
+  before_attempt_hook_components:
+    - worktree-from-main
+  check_components:
+    - no-checks
+
+available:
+  runner_components:
+    - codex-gpt-5-3
+    - claude-sonnet-4-6
+  before_attempt_hook_components:
+    - worktree-from-main
+  check_components:
+    - no-checks
+    - npm-test
+    - ralph
+  optional_hook_components:
+    - jingle-success
+    - jingle-failure
