@@ -46,7 +46,7 @@ Prerequisites:
 
 - Node.js
 - Provider CLIs installed and authenticated for the agents you plan to use:
-  - `claude-code`
+  - `claude`
   - `codex`
   - `cursor-agent`
   - `gemini`
