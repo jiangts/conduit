@@ -3,10 +3,30 @@
   "version": "0.1.0",
   "private": false,
   "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "bin": {
-    "conduit": "./cli.ts"
+    "conduit": "./dist/cli.cjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./server": {
+      "types": "./dist/server.d.ts",
+      "import": "./dist/server.js",
+      "require": "./dist/server.cjs"
+    }
   },
   "scripts": {
+    "build": "tsup",
+    "prepack": "npm run build",
     "dev": "tsx ./cli.ts",
     "start": "tsx ./server.ts",
     "test": "vitest run",
@@ -25,6 +45,7 @@
   },
   "devDependencies": {
     "@types/yargs": "^17.0.35",
+    "tsup": "^8.5.0",
     "tsx": "^4.20.5",
     "typescript": "^5.9.3",
     "vitest": "^4.0.18"
